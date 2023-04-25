@@ -1,5 +1,6 @@
 PLAY FAIR CIPHER
 //*ENCRYPTION*//
+///*** WRITE THE PYTHON FUNCTION FOR MATRIX CREATION IN PLAYFAIR CIPHER ***///
 
 import numpy as np
 def create_matrix(key):
@@ -28,7 +29,8 @@ key = "SECRETKEY"
 #ciphertext = encrypt(plaintext, key)
 ciphertext = create_matrix(key)
 
-//*
+///
+//** WRITE A PROGRAM IN  PYTHON  FOR PREPROCESSING  IN PLAYFAIR CIPHER **//
 
 def preprocess_text(plaintext):
     # Remove spaces and convert to uppercase
@@ -50,8 +52,8 @@ def preprocess_text(plaintext):
     return plaintext
 print(preprocess_text(plaintext))
 
-///*
-
+///
+//** WRITE A PROGRAM IN  PYTHON  SPLITTING THE PLAIN TEXT IN PAIRS **//
 
 def split_pairs(plaintext):
   # split the plaintext into pairs of letters
