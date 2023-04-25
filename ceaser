@@ -20,6 +20,7 @@ print("cipher: " + encrypt(text,s))
 
 
 //*DECRYPT*//
+  //** BRUTE FORCE ATTACK **//
 
 message = 'EGCUGTpEKRJGTpFGOQ' #encerypted message
 LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
