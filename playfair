@@ -60,6 +60,7 @@ def split_pairs(plaintext):
   pairs = []
   for i in range(0, len(plaintext), 2):
       pairs.append(plaintext[i:i+2])
+      
   return pairs
 
 print(split_pairs(plaintext))
