@@ -1,0 +1,64 @@
+#hellman key exchange
+
+import random
+#  Agree on prime number and primitive root
+p = 23  # Prime number
+g = 5   # Primitive root
+
+#  Generate private keys
+a = random.randint(1, p - 1)  # Private key of party A
+b = random.randint(1, p - 1)  # Private key of party B
+
+#  Compute public keys
+A = pow(g, a, p)  # Public key of party A
+B = pow(g, b, p)  # Public key of party B
+
+#   Exchange public keys and Compute shared secret key
+sA = pow(B, a, p)  # Shared secret key for party A
+sB = pow(A, b, p)  # Shared secret key for party B
+
+# Ensure that both shared secret keys are the same
+if sA == sB:
+    print("Shared secret keys match:", sA,",",sB)
+else:
+    print("Error: Shared secret keys do not match!")
+
+
+  
+  #RSA Algorithm
+
+import math
+def gcd(a, h):
+    temp = 0
+    while(1):
+        temp = a % h
+        if (temp == 0):
+            return h
+        a = h
+        h = temp
+p = 3;q = 7;n = p*q;e = 2
+On = (p-1)*(q-1)
+while (e < On):
+    # e must be co-prime to On and smaller than On.
+    if(gcd(e, On) == 1):
+        break
+    else:
+        e = e+1
+ 
+# Private key  d*e = 1 + k * totient
+k = 2
+d = (1 + (k*On))/e
+ 
+# Message to be encrypted
+msg = 16.0
+print("Message data = ", msg)
+ 
+# Encryption c = (msg ^ e) % n
+c = pow(msg, e)
+c = math.fmod(c, n)
+print("Encrypted data = ", c)
+ 
+# Decryption m = (c ^ d) % n
+m = pow(c, d)
+m = math.fmod(m, n)
+print("Original Message Sent = ", m)
